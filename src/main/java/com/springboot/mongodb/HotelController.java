@@ -43,4 +43,9 @@ public class HotelController {
         return hotelRepository.findById(id);
     }
 
+    @GetMapping("/city/{city}")
+    public List<Hotel> findByCity(@PathVariable String city) {
+        return hotelRepository.findByAddress_City(city);
+    }
+
 }

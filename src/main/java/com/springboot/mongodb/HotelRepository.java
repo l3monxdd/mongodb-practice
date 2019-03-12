@@ -6,8 +6,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface HotelRepository extends MongoRepository<Hotel, String>{
+public interface HotelRepository extends MongoRepository<Hotel, String> {
 
-    List<Hotel> findByPricePerNightLessThan (int pricePerNight);
+    List<Hotel> findByPricePerNightLessThan(int pricePerNight);
+
+    List<Hotel> findByAddress_City(String city);
 
 }
